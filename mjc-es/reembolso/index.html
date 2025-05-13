@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Reembolso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div id="formCard" class="card">
+            <!-- Etapa 1: Nombre -->
+            <form id="nameStep" class="form-step active-step">
+                <h2 class="step-title">Solicitar reembolso</h2>
+                <p class="step-description">
+                    Puedes solicitar un reembolso hasta 7 días después de la compra.<br>
+                    Al solicitar un reembolso, tu compra será cancelada y ya no tendrás acceso al producto.
+                </p>
+                <div class="form-group">
+                    <label for="nameInput">1. Tu nombre <span class="required-asterisk">*</span></label>
+                    <input type="text" id="nameInput" placeholder="Responde aquí..." required>
+                    <p class="error-message" id="nameError"></p>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-full-width">COMENZAR</button>
+                </div>
+            </form>
+
+            <!-- Etapa 2: Email -->
+            <form id="emailStep" class="form-step">
+                <div class="form-group">
+                    <label for="emailInput">2. E-mail utilizado en la compra <span class="required-asterisk">*</span></label>
+                    <input type="email" id="emailInput" placeholder="Responde aquí..." required>
+                    <p class="error-message" id="emailError"></p>
+                </div>
+                <div class="form-actions button-group">
+                    <button type="button" class="btn btn-secondary btn-full-width" id="emailBackBtn">Volver</button>
+                    <button type="submit" class="btn btn-primary btn-full-width">Continuar</button>
+                </div>
+            </form>
+
+            <!-- Etapa 3: Motivo -->
+            <form id="reasonStep" class="form-step">
+                <div class="form-group">
+                    <label for="reasonInput">3. Motivo del reembolso <span class="required-asterisk">*</span></label>
+                    <textarea id="reasonInput" placeholder="Responde aquí..." rows="4" required></textarea>
+                    <p class="error-message" id="reasonError"></p>
+                </div>
+                <div class="form-actions button-group">
+                    <button type="button" class="btn btn-secondary btn-full-width" id="reasonBackBtn">Volver</button>
+                    <button type="submit" class="btn btn-primary btn-full-width">SOLICITAR REEMBOLSO</button>
+                </div>
+            </form>
+
+            <!-- Etapa 4: Procesando -->
+            <div id="processingStep" class="form-step step-centered">
+                <div class="spinner-container">
+                    <div class="spinner-border"></div>
+                    <div class="spinner-core"></div>
+                </div>
+                <p class="processing-text">Procesando...</p>
+            </div>
+
+            <!-- Etapa 5: Concluido -->
+            <div id="completedStep" class="form-step step-centered">
+                <div class="completed-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="completed-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <h2 class="step-title">¡Reembolso Completado!</h2>
+                <p class="step-description">
+                    Quédate tranquilo(a), tu reembolso ha sido solicitado.<br>
+                    El tiempo de recepción puede variar según tu banco y puede tardar hasta 14 días hábiles.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

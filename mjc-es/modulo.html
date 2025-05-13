@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido del Módulo - Área de Miembros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-modulo"> <!-- Adicionada classe para CSS específico -->
+    <header class="header header-modulo">
+        <a href="membros.html" class="btn-back-header">&#x2190; Volver</a>
+        <!-- Título H1 removido daqui -->
+    </header>
+
+    <!-- Conteúdo principal agora diretamente abaixo do header -->
+    <h2 id="moduleTitleDisplay" class="module-title-display visually-hidden">Cargando Módulo...</h2>
+    
+    <div id="ebookContent" style="display: none;">
+        <iframe src="" allowfullscreen></iframe>
+    </div>
+
+    <div id="videoArea" class="video-area" style="display: none;">
+        <div class="video-player-section">
+            <div id="videoNavControls" class="video-nav-controls">
+                <button id="prevVideo" title="Clase Anterior" disabled>&lt; Anterior</button>
+                <span id="currentVideoTitle" class="current-video-title">Clase X de Y</span>
+                <button id="nextVideo" title="Siguiente Clase" disabled>Siguiente &gt;</button>
+            </div>
+            <div id="videoPlayerEmbed">
+                <!-- El iframe del vídeo se insertará aquí -->
+            </div>
+        </div>
+        <div id="videoPlaylistSection" class="video-playlist-section">
+            <h4>Clases del Módulo</h4>
+            <ul id="videoPlaylist" class="video-list">
+                <!-- La lista de vídeos se rellenará aquí -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
